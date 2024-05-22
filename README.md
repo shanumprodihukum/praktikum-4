@@ -55,3 +55,17 @@ SELECT AVG(gaji) AS rata_gaji
 FROM pegawai;
 ![ss8](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/3393f3db-c9ef-4d34-9d9c-b995fc6fa304)
 
+ 7.Untuk menampilkan gaji terkecil dari tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat MIN. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT MIN(gaji) AS gaji_terkecil
+FROM pegawai;
+![ss9](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/3f2b1b8d-1fe0-4cb9-acac-abe37bf349b8)
+
+8.Untuk menampilkan gaji terbesar dari tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat MAX. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT MAX(gaji) AS gaji_terbesar
+FROM pegawai;
+![ss10](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/66853df5-1bee-4f18-a556-4437b5d2538f)
+
+
+
