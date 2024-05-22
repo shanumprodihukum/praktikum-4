@@ -54,4 +54,59 @@ FROM pegawai;
 SELECT AVG(gaji) AS rata_gaji
 FROM pegawai;
 ![ss8](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/3393f3db-c9ef-4d34-9d9c-b995fc6fa304)
+7.
+    Untuk menampilkan gaji terkecil dari tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat MIN. Berikut adalah contoh kode SQL untuk melakukannya:
 
+SELECT MIN(gaji) AS gaji_terkecil
+FROM pegawai;
+![ss9](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/b77f1d23-f2cc-4a76-8858-6b5e2b6a3371)
+8.  Untuk menampilkan gaji terbesar dari tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat MAX. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT MAX(gaji) AS gaji_terbesar
+FROM pegawai;
+![ss10](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/92ffb409-065d-46fb-bdc6-30e0010f5c80)
+ TUGAS PRAKTIKUM 4
+ seperti sebelumnya, kita akan membuat tabel terlebih dahulu dengan perintah berikut :
+
+Berikut adalah skrip SQL untuk membuat tabel "hewan" dan mengisinya dengan data yang diberikan:
+
+CREATE TABLE hewan (
+  id VARCHAR(2),
+  name VARCHAR(10),
+  owner VARCHAR(10),
+  species VARCHAR(10),
+  sex CHAR(1)
+);
+
+INSERT INTO hewan (id, name, owner, species, sex)
+VALUES
+  ('p1', 'Puffball', 'Diane', 'Hamster', 'f'),
+  ('p2', 'Claws', 'Gwen', 'Cat', 'm'),
+  ('p3', 'Fluffy', 'Haro 1d', 'Cat', 'f'),
+  ('p4', 'Buffy', 'Haro 1d', 'Dog', 'f'),
+  ('p5', 'Fang', 'Benny', 'Dog', 'm'),
+  ('p6', 'Bowser', 'Diane', 'Dog', 'm'),
+  ('p7', 'Chirpy', 'Gwen', 'Bird', 'f'),
+  ('p8', 'Whistler', 'Gwen', 'Bird', NULL),
+  ('p9', 'Slim', 'Benny', 'Snake', 'm');
+
+Perintah di atas akan membuat tabel "hewan" dengan kolom-kolom yang sesuai, yaitu "id", "name", "owner", "species", dan "sex". Kemudian, perintah INSERT INTO digunakan untuk mengisikan data ke dalam tabel tersebut.
+![ss11](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/3336dbf2-87ce-4122-b23c-fb7f52c2fea0)
+   2. Untuk menampilkan jumlah hewan yang dimiliki setiap owner, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT owner, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY owner;
+![ss12](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/63747076-b614-4c86-8e7f-009ca2bcdb1c)
+3.Untuk menampilkan jumlah hewan berdasarkan jenis kelamin, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+<img width="427" alt="ss14" src="https://github.com/shanumprodihukum/praktikum-4/assets/148035386/c3a60c22-6382-4509-ab1d-e641f734afe7">
+
+   4. Untuk menampilkan jumlah hewan berdasarkan spesies dan jenis kelamin, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT species, sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY species, sex;
+<img width="437" alt="ss13" src="https://github.com/shanumprodihukum/praktikum-4/assets/148035386/9d215e27-96b3-4030-bc2b-cee19839199f">
