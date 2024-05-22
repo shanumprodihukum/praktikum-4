@@ -1,4 +1,4 @@
-![ss1](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/e7c1627a-f67b-4dc9-ad85-4b5c1342b162)# praktikum-4
+)# praktikum-4
 CREATE TABLE pegawai (
   idpegawai VARCHAR(10),
   nama_depan VARCHAR(50),
@@ -10,7 +10,8 @@ CREATE TABLE pegawai (
   gaji INT,
   tunjangan INT
 );
-
+![ss1](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/864a350e-10eb-46c0-8c05-24ebbaaca0b2)
+![ss2](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/06a70037-55ba-4bde-b3cb-727c8305fa42)
 INSERT INTO pegawai (idpegawai, nama_depan, nama_belakang, email, telepon, tgl_kontrak, id_job, gaji, tunjangan) VALUES
 ("E001", "Gojo", "Satoru", "gjsatoru@gmail.com", "08123456719", "2006-01-18", "10001", 2000000, 500000),
 ("E002", "Raja", "Iblis", "sukuna@gmail.com", "08123456710", "2005-03-28", "10002", 2000000, 200000),
@@ -23,14 +24,34 @@ INSERT INTO pegawai (idpegawai, nama_depan, nama_belakang, email, telepon, tgl_k
 SELECT *
 FROM pegawai
 WHERE gaji NOT IN (2000000, 1250000);
+![ss3](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/abc605ad-49f1-43d9-a8d2-b02e0b1b9851)
+
 2.Untuk menampilkan pegawai yang tunjangannya NULL, Anda dapat menggunakan perintah SQL SELECT dengan klausa WHERE dan operator IS NULL. Berikut adalah contoh kode SQL untuk melakukan hal tersebut:
 SELECT *
 FROM pegawai
 WHERE tunjangan IS NULL;
+![ss4](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/270e553a-c7a5-4b80-b99a-73e0b2f98d65)
+
  3.Untuk menampilkan pegawai yang tunjangannya tidak NULL, Anda dapat menggunakan perintah SQL SELECT dengan klausa WHERE dan operator IS NOT NULL. Berikut adalah contoh kode SQL untuk melakukan hal tersebut:
 
 SELECT *
 FROM pegawai
 WHERE tunjangan IS NOT NULL;
+![ss5](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/97db4b09-6e41-4b6b-9f79-636c8a244f27)
+4.Untuk menampilkan atau menghitung jumlah baris atau record dalam tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+![ss6](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/d61964a7-c31d-479b-92ea-3e09120a915e)
+SELECT COUNT(*) AS jumlah_pegawai
+FROM pegawai;
 
+    5. Untuk menghitung jumlah total gaji di tabel pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat SUM. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT SUM(gaji) AS total_gaji
+FROM pegawai;
+![ss7](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/b147c874-bb0e-4ff3-bd9a-e27617961e30)
+
+    6.Untuk menghitung rata-rata gaji pegawai, Anda dapat menggunakan perintah SQL SELECT dengan fungsi agregat AVG. Berikut adalah contoh kode SQL untuk melakukannya:
+
+SELECT AVG(gaji) AS rata_gaji
+FROM pegawai;
+![ss8](https://github.com/shanumprodihukum/praktikum-4/assets/148035386/3393f3db-c9ef-4d34-9d9c-b995fc6fa304)
 
